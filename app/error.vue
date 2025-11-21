@@ -25,9 +25,7 @@
   </div>
 </template>
 
-<script setup>
-  import NotFoundEyes from './components/NotFoundEyes.vue';
-  
+<script setup>  
   // define global store
   const globalStore = useGlobalStore()
 
@@ -36,15 +34,18 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss">  
   .error_page{
     @include displayFlex($direction : column , $gap : 0);
     height: 100vh;
-    background: #fff;
+    background: $mainColor;
     position: relative;
     .image{
       width: 300px;
       margin: 0 auto;
+      img{
+        filter: brightness(0) invert(1);
+      }
       @media (max-width : 560px){
         width: 200px;
       }
@@ -53,11 +54,8 @@
     h1{
       font-size: 150px;
       margin-bottom: 0px;
-      color: $mainColor;
+      color: $thirdColor;
       @include displayFlex($gap : 20px);
-      span{
-        color: $secColor;
-      }
     }
 
     h3{

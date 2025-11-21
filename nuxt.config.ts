@@ -21,12 +21,12 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
     head: {
-      title:'Website Title',
-      htmlAttrs: { lang: 'ar' },
+      title:'Layla',
+      htmlAttrs: { lang: 'en' , dir:  'ltr' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Website Title' },
+        { name: 'description', content: 'Layla' },
       ],
       // link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }],
     },
@@ -112,12 +112,6 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts',
   },
 
-  css: [
-    "@/assets/css/style.css",
-    "primeicons/primeicons.css"
-    // 'primevue/resources/themes/aura-light-green/theme.css'
-  ],
-
 
   vite: {
     css: {
@@ -131,5 +125,11 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  css: [
+    "@/assets/scss/style.scss",
+    "primeicons/primeicons.css"
+    // 'primevue/resources/themes/aura-light-green/theme.css'
+  ],
 
 })
