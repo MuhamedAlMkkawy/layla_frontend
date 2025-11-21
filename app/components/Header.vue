@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="['header' , {'scrolled' : isScrolled }]" >
     <div class="container header_content">
       <NuxtLink :to="$localeRoute('/')" class="image">
         <img src="../assets/images/logo.png" alt="image" loading="lazy">
@@ -23,20 +23,32 @@
 
 <script setup>
   const globalStore = useGlobalStore()
+
+  // USE THE LOCALES TO MANAGE THE LANGUAGE
   const { locale, locales } = useI18n()
   const switchLocalePath = useSwitchLocalePath()
 
   const availableLocales = computed(() => {
     return locales.value.filter(i => i.code !== locale.value)
   })
+
+  // TO CHECK THE SCROLL FROM TOP TO MANAGE THE BACKGROUND OF THE HEADER
+  const isScrolled = ref(false)
+  onMounted(()=>{
+    window.addEventListener('scroll', () => {
+      isScrolled.value = window.pageYOffset > 200
+    })
+  })
 </script>
 
 
 <style lang="scss" scoped>
   header{
-    position: relative;
-    z-index: 3;
+    position: sticky;
+    top: 0;
+    z-index: 9;
     padding: 30px 0;
+    transition: 0.5s;
     .header_content{
       @include displayFlex($justify : space-between , $gap : 20px);
       .image{
@@ -52,9 +64,8 @@
           @include displayFlex();
           transition : 0.3s;
           &:hover{
-            background: $mainColor;
-            color: $thirdColor;
-            border-color: $mainColor;
+            background: $thirdColor;
+            color: $mainColor;
           }
         }
       }
@@ -62,6 +73,10 @@
         flex-direction: column;
         justify-content: center;
       }
+    }
+    &.scrolled{
+      background: $mainColor;
+      box-shadow: 0 0 6px #e4e4e4;
     }
   }
 </style>

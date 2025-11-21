@@ -77,6 +77,7 @@ body{
   scroll-behavior: smooth;
   overflow-x: hidden;
   position: relative;
+  background: $whiteColor;
 }
 
 // CHANGE SCROLL BAR COLOR
@@ -161,7 +162,7 @@ input:-internal-autofill-selected {
 
 ::selection{
   background: $secColor;
-  color: $whiteColor;
+  color: #000;
 }
 
 ::-webkit-scrollbar{
@@ -177,4 +178,9 @@ input:-internal-autofill-selected {
 
 input[type="file" i]::-webkit-file-upload-button{
   display: none;
+}
+
+
+section{
+  padding-block: 50px;
 }
