@@ -48,6 +48,7 @@
   span[role="alert"] {
     display: block;
     color: red;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 </style>

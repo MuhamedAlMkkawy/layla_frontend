@@ -20,7 +20,7 @@
 
 <style lang="scss" scoped>
   footer{
-    margin-top: 50px;
+    // margin-top: 50px;
     padding-block: 50px ;
     text-align: center;
     background: $mainColor;

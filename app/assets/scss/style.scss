@@ -26,7 +26,7 @@
   }
 
 
-
+  // Style the headers
   h3.title{
     font-size: 20px;
     margin-bottom: 20x;
@@ -37,6 +37,28 @@
     }
   }
 
+
+  .underline_header{
+    font-size: 40px;
+    font-weight: 600;
+    margin-block-end: 50px;
+    position: relative;
+    width: fit-content;
+    &::after{
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      bottom: 0;
+      width: 70%;
+      height: 5px;
+      background: $mainColor;
+      border-radius: 5px;
+    }
+  }
+
+
+
+  // style the rating star icon
   .p-rating-icon{
     cursor: default;
   }

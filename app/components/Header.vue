@@ -1,5 +1,5 @@
 <template>
-  <header :class="['header' , {'scrolled' : isScrolled }]" >
+  <header :class="['header' , {'scrolled' : isScrolled }]"  :style="$route.path !== '/' && $route.path !== '/ar' ? 'background : #000;' : ''" >
     <div class="container header_content">
       <NuxtLink :to="$localeRoute('/')" class="image">
         <img src="../assets/images/logo.png" alt="image" loading="lazy">
