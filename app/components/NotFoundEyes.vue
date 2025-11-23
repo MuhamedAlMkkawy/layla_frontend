@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
     }
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 450px) {
     gap: 1rem;
     
     .eye {

@@ -1,7 +1,7 @@
 <template>
   <div class="error_page">
     <div class="image">
-      <img src="/assets/images/logo.png" alt="logo image" loading="lazy">
+      <img :src="logoImg" alt="logo image" loading="lazy">
     </div>
     <h1>
       4 
@@ -26,11 +26,13 @@
 </template>
 
 <script setup>  
+  import logoImg from '@/assets/images/logo.png'
   // define global store
   const globalStore = useGlobalStore()
 
   // define locale route
   const localeRoute = useLocaleRoute()
+
 </script>
 
 
@@ -41,10 +43,10 @@
     background: $mainColor;
     position: relative;
     .image{
-      width: 300px;
+      width: 400px;
       margin: 0 auto;
       img{
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1) !important;
       }
       @media (max-width : 560px){
         width: 200px;
