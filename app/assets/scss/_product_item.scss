@@ -1,0 +1,110 @@
+.product_item{
+  border: 1px solid $mainColor;
+  border-radius: 4px;
+  overflow: hidden;
+  .image{
+    height: 250px;
+    position: relative;
+    .rating{
+      padding: 5px 8px 6px;
+      border-radius: 5px;
+      background: $thirdColor;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      i.pi{
+        color: gold;
+      }
+      p{
+        font-size: 14px;
+        transform: translateY(3px);
+      }
+    }
+  }
+
+  .product_info{
+    padding: 10px 8px 0;
+    h5{
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .price {
+      margin-block: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      span{
+        color: $mainColor;
+        del{
+          margin-inline-start: 10px;
+          font-weight: 300;
+          color: grey;
+        }
+      }
+    }
+
+    .colors{
+      @include displayFlex($justify : flex-start , $gap : 5px);
+      p{
+        font-size: 16px;
+        font-weight: 800;
+      }
+      li{
+        @include circle(30px);
+        border: 1px solid #ccc;
+        cursor: pointer;
+        @include displayFlex();
+        span{
+          @include circle(22px);
+        }
+        &.active{
+          background: #00000066;
+        }
+      } 
+    }
+    
+    
+    .control_quantity{
+      span{
+        font-size: 25px;
+        margin-inline: 10px;
+      }
+      button{
+        font-size: 28px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $mainColor;
+        transition: 0.3s;
+        border-radius: 8px;
+        &:hover{
+          background: $mainColor;
+          color: #fff;
+        }
+        &:disabled{
+          background: grey;
+          color: #fff;
+          border-color: transparent;
+        }
+      }
+    }
+
+  }
+  button.main-btn{
+    border-radius: 0;
+    span{
+      width: 0;
+      overflow: hidden;
+      transition: 1s;
+    }
+    &:hover{
+      span{
+        width: auto;
+        overflow: visible;
+        margin-inline-end: 10px;
+      }
+    }
+  }
+}

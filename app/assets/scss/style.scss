@@ -7,6 +7,7 @@
 @import "./popup";
 @import "./flex_buttons";
 @import "./cart_items";
+@import "./product_item";
 
 
   .container{
@@ -44,6 +45,7 @@
     margin-block-end: 50px;
     position: relative;
     width: fit-content;
+    @include displayFlex($gap : 0);
     &::after{
       content: '';
       position: absolute;
@@ -53,6 +55,50 @@
       height: 5px;
       background: $mainColor;
       border-radius: 5px;
+    }
+    &.centered{
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      &::after{
+        inset-inline-start: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+      }
+    }
+    .image{
+      width: 60px;
+    }
+  }
+
+
+  .flowers_header{
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 12px 45px;
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+    }
+    &::after{
+      background: url('../images/header_flowers.png') no-repeat center/contain;
+      inset-inline-start: 0;
+      top: -10px;
+    }
+    &::before{
+      background: url('../images/header_flowers.png') no-repeat center/contain;
+      inset-inline-end: 0;
+      bottom: -10px;
+      transform: rotate(180deg);
+    }
+    @media (max-width : 500px) {
+      font-size: 30px;
     }
   }
 
@@ -64,4 +110,10 @@
   }
   .p-rating-option-active .p-rating-icon{
     color: gold !important;
+  }
+
+
+
+  .page{
+    padding-block: 100px;
   }

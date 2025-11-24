@@ -1,5 +1,5 @@
 <template>
-  <section class="page cart_page">
+  <div class="page cart_page">
     <div class="container cart_content">
       <!-- <PageBreadcrumb pageName="Cart"/> -->
       <h1 class="underline_header">Products</h1>
@@ -72,7 +72,7 @@
         <button class="main-btn">Checkout</button>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

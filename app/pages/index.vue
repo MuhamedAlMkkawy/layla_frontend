@@ -8,7 +8,7 @@
           Categories
         </h3>
         <div class="categories_content">
-          <NuxtLink class="category_item" v-for="i in 2" :key="i" :style="{ 'background-image': `url(https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg)` }">
+          <NuxtLink :to="$localeRoute('/products')" class="category_item" v-for="i in 2" :key="i" :style="{ 'background-image': `url(https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg)` }">
             <h4>Lorem ipsum dolor</h4>
             <p class="text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aspernatur quia quo tempore quibusdam commodi unde vero perferendis numquam quam dolorem, dicta eaque consectetur sapiente alias porro illum itaque soluta?

@@ -47,13 +47,17 @@
     position: sticky;
     top: 0;
     z-index: 9;
-    padding: 30px 0;
+    padding: 10px 0;
     transition: 0.5s;
     .header_content{
       @include displayFlex($justify : space-between , $gap : 20px);
       .image{
         width: 200px;
+        height: 60px;
         flex-shrink: 0;
+        img{
+          object-fit: contain
+        }
       }
       ul.header_icons{
         @include displayFlex();
@@ -75,7 +79,7 @@
       }
     }
     &.scrolled{
-      background: $mainColor;
+      background: #000;
       box-shadow: 0 0 6px #e4e4e4;
     }
   }

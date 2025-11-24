@@ -28,9 +28,14 @@
     .footer_content{
       max-width: 800px;
       margin: 0 auto;
-      .image{
+      > .image{
         max-width: 350px;
+        height: 100px;
         margin: 0 auto 30px;
+        img{
+          object-fit: contain;
+          filter: brightness(0)invert(1);
+        }
       }
       p{
         font-size: 14px;

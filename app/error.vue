@@ -6,6 +6,7 @@
     <h1>
       4 
       <NotFoundEyes/>
+      <!-- <span>0</span> -->
       4
     </h1>
     <h3>
@@ -42,22 +43,36 @@
     height: 100vh;
     background: $mainColor;
     position: relative;
+    padding-inline: 20px;
     .image{
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
+      height: 80px;
       margin: 0 auto;
       img{
+        object-fit: cover !important;
         filter: brightness(0) invert(1) !important;
       }
-      @media (max-width : 560px){
-        width: 200px;
-      }
+      // @media (max-width : 560px){
+      //   width: 200px;
+      // }
     }
 
     h1{
-      font-size: 150px;
-      margin-bottom: 0px;
+      font-size: 200px;
+      margin-block: 40px;
       color: $thirdColor;
       @include displayFlex($gap : 20px);
+      // span{
+      //   display: none;
+      //   color: $thirdColor;
+      //   @media (max-width : 450px){
+      //     display: flex;
+      //   }
+      // }
+      @media (max-width : 567px){
+        font-size: 80px;
+      }
     }
 
     h3{

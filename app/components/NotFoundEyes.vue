@@ -156,29 +156,29 @@ onBeforeUnmount(() => {
     }
   }
 
-  @media (max-width: 450px) {
-    gap: 1rem;
+  // @media (max-width: 450px) {
+  //   gap: 1rem;
     
-    .eye {
-      width: 4rem;
-      height: 4rem;
-      border-width: 0.2rem;
+  //   .eye {
+  //     width: 4rem;
+  //     height: 4rem;
+  //     border-width: 0.2rem;
       
-      &::before {
-        width: 110%;
-        height: 110%;
-      }
+  //     &::before {
+  //       width: 110%;
+  //       height: 110%;
+  //     }
       
-      .pupil {
-        width: 1.5rem;
-        height: 1.5rem;
+  //     .pupil {
+  //       width: 1.5rem;
+  //       height: 1.5rem;
         
-        .light-reflection {
-          width: 0.5rem;
-          height: 0.5rem;
-        }
-      }
-    }
-  }
+  //       .light-reflection {
+  //         width: 0.5rem;
+  //         height: 0.5rem;
+  //       }
+  //     }
+  //   }
+  // }
 }
 </style>

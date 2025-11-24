@@ -1,6 +1,6 @@
   .cart_items{
     .cart_item{
-      padding: 50px 20px;
+      padding: 10px 20px;
       border: 1px solid $mainColor;
       @include displayFlex($justify : space-between , $gap : 20px);
       border-radius: 8px;

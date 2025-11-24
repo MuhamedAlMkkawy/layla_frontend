@@ -1,5 +1,5 @@
 <template>
-  <section class="orders_page page">
+  <div class="orders_page page">
     <div class="container">
       <h1 class="underline_header">Orders</h1>
       <div class="cart_items">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
@@ -85,5 +85,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .cart_item{
+    padding-block: 0px;
+  }
 </style>
