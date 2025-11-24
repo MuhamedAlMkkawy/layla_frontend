@@ -45,9 +45,9 @@
     position: relative;
     padding-inline: 20px;
     .image{
-      max-width: 400px;
+      max-width: 300px;
       width: 100%;
-      height: 80px;
+      height: fit-content;
       margin: 0 auto;
       img{
         object-fit: cover !important;
@@ -60,7 +60,7 @@
 
     h1{
       font-size: 200px;
-      margin-block: 40px;
+      margin-block: 0 40px;
       color: $thirdColor;
       @include displayFlex($gap : 20px);
       // span{

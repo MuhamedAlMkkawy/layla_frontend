@@ -99,11 +99,12 @@ import FeedbackSlider from '~/components/FeedbackSlider.vue';
   // STYLE THE BEST SALE ITEMS
   .best_sale{
     .best_sale_content{
-      @include displayGrid(200px , $gap : 30px 20px);
+      @include displayFlex($wrap : wrap , $justify : space-evenly);
       .best_sale_item{
         text-align: center;
+        max-width: 300px;
         .image{
-          @include circle(150px);
+          @include circle(clamp(120px , 20vw , 250px));
           margin: 0 auto 20px;
         }
       }

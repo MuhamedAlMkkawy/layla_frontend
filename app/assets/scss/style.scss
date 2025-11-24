@@ -112,8 +112,9 @@
     color: gold !important;
   }
 
-
-
   .page{
     padding-block: 100px;
+    @media (max-width : 567px){
+      padding-block: 50px;
+    }
   }

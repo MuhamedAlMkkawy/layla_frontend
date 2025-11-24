@@ -42,6 +42,19 @@
         itemsToShow: 3,
         snapAlign: 'start',
       },
+      // 500px and up
+      767: {
+        itemsToShow: 4,
+        snapAlign: 'start',
+      },
+      992: {
+        itemsToShow: 5,
+        snapAlign: 'start',
+      },
+      1200: {
+        itemsToShow: 6,
+        snapAlign: 'start',
+      },
     },
   }
 </script>

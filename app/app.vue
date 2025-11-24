@@ -21,14 +21,20 @@
 
 
 <style>
-  .page-enter-active,
-  .page-leave-active {
-    transition: all 1s;
-  }
-  .page-enter-from,
-  .page-leave-to {
-    opacity: 0;
-    transform: scale(0.7) rotate(4deg);
-    /* transform: translateY(50%) rotate(45deg); */
-  }
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.8s ease, 
+  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: scale(0.92) translateY(15px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: scale(0.96) translateY(-10px);
+}
+
 </style>
