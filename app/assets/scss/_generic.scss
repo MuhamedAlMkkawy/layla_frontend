@@ -184,4 +184,7 @@ input[type="file" i]::-webkit-file-upload-button{
 
 section{
   padding-block: 50px;
+  &.carousel{
+    padding-block: 0 ;
+  }
 }

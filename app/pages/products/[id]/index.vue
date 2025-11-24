@@ -1,52 +1,58 @@
 <template>
   <div class="page product_page">
-    <div class="container product_content">
-      <ProductSlider 
-        :images = productImages
-      />
-      <div class="product_info">
-        <div class="product_header">
-          <h1>Product Name</h1>
-          <div class="category">Boque</div>
+    <div class="container">
+      <section class="product_content">
+        <ProductSlider 
+          :images = productImages
+        />
+        <div class="product_info">
+          <div class="product_header">
+            <h1>Product Name</h1>
+            <div class="category">Boque</div>
+          </div>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
+          </p>
+          <ul class="product_details">
+            <li>
+              <h4>Rating : </h4>
+              <Rating readonly :modelValue="4" />
+            </li>
+            <li>
+              <h4>Price : </h4>
+              <h5>100$ <del>150$</del></h5>
+            </li>
+            <li>
+              <h4>Stock : </h4>
+              <h5>5</h5>
+            </li>
+          </ul>
+          <ul class="colors">
+            <h4>
+              Colors : 
+            </h4>
+            <li><span style="background-color: #007BFF"></span></li>
+            <li><span style="background-color: #FFD60A"></span></li>
+            <li><span style="background-color: #28C76F"></span></li>
+            <li><span style="background-color: #FF66B3"></span></li>
+          </ul>
+          <div class="flex_buttons">
+            <button class="main-btn" @click="ToggleShowPopup">
+              <span>إضافة إلي السلة</span>
+              <i class="pi pi-shopping-cart"></i>
+            </button>
+            <button class="main-btn reversed" @click="$router.push($localeRoute('/'))">
+              العودة للرئيسية
+            </button>
+          </div>
         </div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam sit tenetur. Omnis asperiores hic qui totam adipisci deleniti laborum laboriosam consectetur nemo dolore obcaecati officia, mollitia repellat, ad necessitatibus?
-        </p>
-        <ul class="product_details">
-          <li>
-            <h4>Rating : </h4>
-            <Rating readonly :modelValue="4" />
-          </li>
-          <li>
-            <h4>Price : </h4>
-            <h5>100$ <del>150$</del></h5>
-          </li>
-          <li>
-            <h4>Stock : </h4>
-            <h5>5</h5>
-          </li>
-        </ul>
-        <ul class="colors">
-          <h4>
-            Colors : 
-          </h4>
-          <li><span style="background-color: #007BFF"></span></li>
-          <li><span style="background-color: #FFD60A"></span></li>
-          <li><span style="background-color: #28C76F"></span></li>
-          <li><span style="background-color: #FF66B3"></span></li>
-        </ul>
-        <div class="flex_buttons">
-          <button class="main-btn" @click="ToggleShowPopup">
-            <span>إضافة إلي السلة</span>
-            <i class="pi pi-shopping-cart"></i>
-          </button>
-          <button class="main-btn reversed" @click="$router.push($localeRoute('/'))">
-            العودة للرئيسية
-          </button>
-        </div>
-      </div>
+      </section>
+      <section class="recommended Products">
+        <h1 class="underline_header">Recommened Products</h1>
+        <RecommendedProducts />
+      </section>
     </div>
     <CartProduct v-if="showAddToCartPopup" @ToggleShowPopup="ToggleShowPopup"/>
   </div>
