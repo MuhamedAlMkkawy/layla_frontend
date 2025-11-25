@@ -138,7 +138,11 @@
           }
         }
       }
-
+      .colors{
+        li{
+          cursor: default;
+        }
+      }
       .flex_buttons{
         justify-content: flex-start;
       }

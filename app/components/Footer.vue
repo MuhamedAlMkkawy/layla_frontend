@@ -21,9 +21,9 @@
 <style lang="scss" scoped>
   footer{
     // margin-top: 50px;
-    padding-block: 50px ;
+    padding-block: 50px 120px;
     text-align: center;
-    background: $mainColor;
+    background: #000;
     color: #fff;
     .footer_content{
       max-width: 800px;

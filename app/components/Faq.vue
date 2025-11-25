@@ -27,6 +27,6 @@
   .faq_cards{
     max-width: 900px;
     margin: 0 auto;
-    min-height: 600px;
+    min-height: 500px;
   }
 </style>

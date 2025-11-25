@@ -4,11 +4,17 @@
     <div class="container">
       <!-- CATEGORIES -->
       <section class="categories">
-        <h3 class="title centered">
+        <h3 class="flowers_header">
           Categories
         </h3>
         <div class="categories_content">
-          <NuxtLink :to="$localeRoute('/products')" class="category_item" v-for="i in 2" :key="i" :style="{ 'background-image': `url(https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg)` }">
+          <NuxtLink :to="$localeRoute('/products')" class="category_item" :style="{ 'background': `url(https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg)` }">
+            <h4>Lorem ipsum dolor</h4>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aspernatur quia quo tempore quibusdam commodi unde vero perferendis numquam quam dolorem, dicta eaque consectetur sapiente alias porro illum itaque soluta?
+            </p>
+          </NuxtLink>
+          <NuxtLink :to="$localeRoute('/products')" class="category_item" :style="{ 'background': `url(https://cdn.pixabay.com/photo/2024/11/25/10/40/margaritas-9223058_1280.jpg)` }">
             <h4>Lorem ipsum dolor</h4>
             <p class="text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aspernatur quia quo tempore quibusdam commodi unde vero perferendis numquam quam dolorem, dicta eaque consectetur sapiente alias porro illum itaque soluta?
@@ -19,9 +25,9 @@
       <!-- CATEGORIES -->
       <!-- BEST SALE -->
       <section class="best_sale">
-        <h3 class="title centered">Best Sale</h3>
+        <h3 class="flowers_header">Best Sale</h3>
         <div class="best_sale_content">
-          <NuxtLink class="best_sale_item" v-for="i in 5" :key="i">
+          <NuxtLink :to="$localeRoute('/products/' + i)" class="best_sale_item" v-for="i in 5" :key="i">
             <div class="image">
               <img src="https://c4.wallpaperflare.com/wallpaper/911/205/312/artwork-digital-art-landscape-river-wallpaper-preview.jpg" alt="image" loading="lazy">
             </div>
@@ -32,13 +38,16 @@
       <!-- BEST SALE -->
       <!-- FEEDBACKS -->
       <section class="feedbacks">
-        <h3 class="title centered">Feedbacks</h3>
+        <h3 class="flowers_header">Feedbacks</h3>
         <FeedbackSlider />
       </section>
       <!-- FEEDBACKS -->
       <!-- FAQ -->
       <section class="faq">
-        <h3 class="title centered">FAQ</h3>
+        <!-- <img src="@/assets/images/3.png" alt="image" loading="lazy" class="img_1"> -->
+        <img src="@/assets/images/2.png" alt="image" loading="lazy" class="img_2">
+        <!-- <img src="@/assets/images/3.png" alt="image" loading="lazy" class="img_3"> -->
+        <h3 class="flowers_header">FAQ</h3>
         <Faq />
       </section>
       <!-- FAQ -->
@@ -47,8 +56,6 @@
 </template>
 
 <script setup>
-import FeedbackSlider from '~/components/FeedbackSlider.vue';
-
 
 </script>
 
@@ -67,6 +74,9 @@ import FeedbackSlider from '~/components/FeedbackSlider.vue';
         position: relative;
         z-index: 3;
         overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         h4{
           font-size: clamp(18px , 2.5vw , 20px);
           margin-bottom: 10px;
@@ -104,11 +114,70 @@ import FeedbackSlider from '~/components/FeedbackSlider.vue';
         text-align: center;
         max-width: 300px;
         .image{
-          @include circle(clamp(120px , 20vw , 250px));
+          @include circle(clamp(120px , 20vw , 200px));
           margin: 0 auto 20px;
+          img{
+            transform: scale(1.5);
+            transition: 1s;
+          }
+        }
+        h5{
+          font-size: clamp(18px , 2.5vw , 25px);
+          font-weight: 500;
+          transition: 0.31s;
+        }
+        &:hover{
+          .image{
+            img{
+              transform: scale(1);
+            }
+          }
+          h5{
+            color: $mainColor;
+          }
         }
       }
     }
   }
 
+  // STYLE THE FAQ SECTION
+  .faq{
+    position: relative;
+    z-index: 3;
+    img{
+      width: 300px;
+      height: fit-content;
+      object-fit: contain;
+      position: absolute;
+      z-index: -1;
+      &.img_1{
+        top: 0;
+        left: 0px;
+        animation: move-down 3s infinite alternate-reverse;
+      }
+      &.img_2{
+        bottom: 0;
+        right: 0px;
+        animation: move-up 3s infinite alternate-reverse;
+      }
+    }
+
+    @keyframes move-down {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: 50px;
+      }
+    }
+
+    @keyframes move-up {
+      0% {
+        bottom: 0;
+      }
+      100% {
+        bottom: 50px;
+      }
+    }
+  }
 </style>

@@ -26,35 +26,23 @@
     // slideEffect: 'fade',
     autoplay: 2000, // Enables autoplay
     duration: 3000, // Time interval between slides
+    snapAlign : 'start' ,
     breakpoints: {
       // 300px and up
       300: {
         itemsToShow: 1,
-        snapAlign: 'center',
       },
-      // 400px and up
-      400: {
+      // 500px and up
+      600: {
         itemsToShow: 2,
-        snapAlign: 'start',
       },
       // 500px and up
-      500: {
-        itemsToShow: 3,
-        snapAlign: 'start',
-      },
-      // 500px and up
-      767: {
-        itemsToShow: 4,
-        snapAlign: 'start',
-      },
       992: {
-        itemsToShow: 5,
-        snapAlign: 'start',
+        itemsToShow: 3,
       },
       1200: {
-        itemsToShow: 6,
-        snapAlign: 'start',
-      },
+        itemsToShow: 4,
+      }
     },
   }
 </script>
