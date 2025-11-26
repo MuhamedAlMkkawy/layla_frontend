@@ -69,7 +69,7 @@
           <h4>Grand Total</h4>
           <h6>80$</h6>
         </div>
-        <button class="main-btn">Checkout</button>
+        <NuxtLink class="main-btn" :to="$localeRoute('/checkout')">Checkout</NuxtLink>
       </div>
     </div>
   </div>

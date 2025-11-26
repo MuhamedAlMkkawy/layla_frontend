@@ -46,7 +46,8 @@
     itemsToShow: 5,
     gap: 5,
     autoplay : true, // Enables autoplay
-    transition : 4000, // Time interval between slides
+    autoplaySpeed: 0,  
+    transition : 5000, // Time interval between slides
     wrapAround: true,
     breakpoints: {
       // 300px and up
@@ -67,3 +68,9 @@
     },
   }
 </script>
+
+<style lang="scss" scoped>
+  .carousel__track {
+    transition-timing-function: linear-ease !important; /* smooth continuous */
+  }
+</style>
