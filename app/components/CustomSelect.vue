@@ -56,9 +56,9 @@ const emit = defineEmits(['updateSelectField'])
     margin-bottom: 5px; 
     border-radius: 8px;
     overflow: hidden;
+    color: #333;
     select{
       padding: 25px 10px;
-      color: #333;
     }
   }
 </style>

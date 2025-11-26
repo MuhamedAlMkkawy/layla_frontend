@@ -43,6 +43,7 @@
     background: #e4e4e499;
     margin-bottom: 5px;
     border-radius: 5px;
+    color: #333;
   }
 
   span[role="alert"] {
