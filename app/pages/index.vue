@@ -44,7 +44,7 @@
       <!-- FEEDBACKS -->
       <!-- FAQ -->
       <section class="faq">
-        <!-- <img src="@/assets/images/3.png" alt="image" loading="lazy" class="img_1"> -->
+        <!-- <img src="@/assets/images/1.png" alt="image" loading="lazy" class="img_1"> -->
         <img src="@/assets/images/2.png" alt="image" loading="lazy" class="img_2">
         <!-- <img src="@/assets/images/3.png" alt="image" loading="lazy" class="img_3"> -->
         <h3 class="flowers_header">FAQ</h3>

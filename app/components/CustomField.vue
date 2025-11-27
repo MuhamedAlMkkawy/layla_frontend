@@ -5,6 +5,7 @@
       :type="props.type" 
       :placeholder="props.placeholder" 
       :autofocus="props.autofocus"
+      :title="props.name"
       @change="emit('updateInputField', $event.target.value)"
     />
     <VeeErrorMessage :name="props.name" />

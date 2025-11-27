@@ -8,6 +8,7 @@
         :validation-schema="checkoutSchema" 
         class="form" 
         v-slot="{ meta }"
+        @handleSubmit="handleSubmit"
       >
         <CustomField 
           name="full_name"
@@ -16,11 +17,23 @@
           class="check_input"
         />
         <CustomField
+          name="phone_number_1"
+          type="number"
+          placeholder="Phone Number 1"
+          class="check_input"
+        />
+        <CustomField
+          name="phone_number_2"
+          type="number"
+          placeholder="Phone Number 2 ( Optional )"
+          class="check_input"
+        />
+        <!-- <CustomField
           name="governorate"
           type="text"
           placeholder="Governorate"
           class="check_input"
-        />
+        /> -->
         <CustomSelect
           name="governerate"
           :options="[
@@ -44,21 +57,12 @@
           placeholder="Full Address"
           class="check_input"
         />
-        <CustomField
-          name="phone_number_1"
-          type="text"
-          placeholder="Phone Number 1"
-          class="check_input"
-        />
-        <CustomField
-          name="phone_number_2"
-          type="text"
-          placeholder="Phone Number 2 ( Optional )"
-          class="check_input"
-        />
         <button class="check_button main-btn">Apply</button>
       </VeeForm>
     </div>
+    <SuccesPopup 
+      v-if="showSuccessPopup"
+    />
   </div>
 </template>
 
@@ -66,6 +70,11 @@
   import { checkoutSchema } from '@/schemas/global';
 
   const governerate = ref('')
+
+  
+  const handleSubmit = (body) => {
+    console.log(body)
+  }
 </script>
 
 <style lang="scss" scoped>

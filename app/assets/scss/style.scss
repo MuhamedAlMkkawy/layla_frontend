@@ -119,3 +119,8 @@
       padding-block: 40px;
     }
   }
+
+
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    display: none !important;
+  }
