@@ -45,7 +45,7 @@
     // height: 200,
     itemsToShow: 5,
     gap: 5,
-    autoplay : true, // Enables autoplay
+    autoplay : 3000, // Enables autoplay
     autoplaySpeed: 0,  
     transition : 5000, // Time interval between slides
     wrapAround: true,

@@ -28,7 +28,16 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Layla' },
       ],
-      // link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { href: 'https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap', rel: 'stylesheet' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { href: 'https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap', rel: 'stylesheet' },
+
+      ],
     },
   },
 

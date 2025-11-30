@@ -37,12 +37,9 @@
         itemsToShow: 2,
       },
       // 500px and up
-      992: {
-        itemsToShow: 3,
-      },
-      1200: {
-        itemsToShow: 4,
-      }
+      // 992: {
+      //   itemsToShow: 3,
+      // },
     },
   }
 </script>

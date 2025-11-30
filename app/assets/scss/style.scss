@@ -11,7 +11,7 @@
 
 
   .container{
-    max-width: clamp(300px, 100%, 1800px);
+    max-width: clamp(300px, 100%, 1200px);
     margin: 0 auto;
     padding-inline: 20px;
     transition: 1s;
@@ -74,12 +74,13 @@
 
 
   .flowers_header{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     position: relative;
     width: fit-content;
-    margin: 0 auto 80px;
+    margin: 0 auto 40px;
     padding: 12px 30px;
+    font-family: "Lavishly Yours", cursive;
     &::after, &::before{
       content: '';
       position: absolute;

@@ -1,6 +1,6 @@
 <template>
   <div class="card faq_cards">
-    <Accordion v-for="i in 6" :key="i" :value="activeAccordion">
+    <Accordion v-for="i in 6" :key="i" :value="activeAccordion" data-aos="fade-up" :data-aos-delay="i * 200">
       <AccordionPanel :value="i" @click="activeAccordion = i">
         <AccordionHeader>Header I</AccordionHeader>
         <AccordionContent>

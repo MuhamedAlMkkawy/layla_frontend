@@ -2,13 +2,13 @@
   <footer class="footer">
     <div class="container footer_content">
       <div class="image">
-        <img src="../assets/images/logo.png" alt="image" loading="lazy">
+        <img src="../assets/images/logo.png" data-aos="fade-in" alt="image" loading="lazy">
       </div>
-      <p>
+      <p data-aos="fade-up" data-aos-delay="200">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ea tempora dolorum doloribus! Totam, culpa repudiandae. Obcaecati repellendus maxime ut eaque, asperiores dolores delectus, vitae dolorem voluptatem possimus nostrum itaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit animi ducimus odio in eveniet ipsum magnam nostrum accusantium id corrupti, libero culpa autem, mollitia recusandae maiores architecto explicabo beatae sed.
       </p>
       <div class="social_links">
-        <NuxtLink class="image" v-for="i in 6" :key="i"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="image" loading="lazy"></NuxtLink>
+        <NuxtLink class="image" v-for="i in 6" :key="i" data-aos="fade-up" :data-aos-delay="i * 200"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="image" loading="lazy"></NuxtLink>
       </div>
     </div>
   </footer>

@@ -36,7 +36,7 @@
   const isScrolled = ref(false)
   onMounted(()=>{
     window.addEventListener('scroll', () => {
-      isScrolled.value = window.pageYOffset > 200
+      isScrolled.value = window.pageYOffset > 100
     })
   })
 </script>
@@ -49,10 +49,11 @@
     z-index: 9;
     padding: 10px 0;
     transition: 0.5s;
+    // background: #000;
     .header_content{
       @include displayFlex($justify : space-between , $gap : 20px);
       .image{
-        width: 200px;
+        width: fit-content;
         height: 60px;
         flex-shrink: 0;
         img{
@@ -63,13 +64,14 @@
         @include displayFlex();
         a{
           @include circle(40px , 5px);
-          border: 1px solid $thirdColor;
-          color: $thirdColor;
+          border: 1px solid #000;
+          color: #000;
           @include displayFlex();
           transition : 0.3s;
           &:hover{
-            background: $thirdColor;
-            color: $mainColor;
+            background: $mainColor;
+            color: #fff;
+            border-color: $mainColor;
           }
         }
       }
@@ -79,8 +81,17 @@
       }
     }
     &.scrolled{
-      background: #000;
-      box-shadow: 0 0 6px #e4e4e4;
+      background: #fff;
+      // box-shadow: 0 0 6px #e4e4e4;
+      .image{
+        filter: brightness(0);
+      }
+      ul.header_icons{
+        a{
+          border-color: $mainColor;
+          color: $mainColor;
+        }
+      }
     }
   }
 </style>
