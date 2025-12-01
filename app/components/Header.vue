@@ -1,5 +1,6 @@
 <template>
-  <header :class="['header' , {'scrolled' : isScrolled }]"  :style="$route.path !== '/' && $route.path !== '/ar' ? 'background : #000;' : ''" >
+  <header :class="['header' , {'scrolled' : isScrolled }]"   >
+    <!-- :style="$route.path !== '/' && $route.path !== '/ar' ? 'background : #000;' : ''" -->
     <div class="container header_content">
       <NuxtLink :to="$localeRoute('/')" class="image logo_image">
         <img src="../assets/images/logo.png" alt="image" loading="lazy">
@@ -51,6 +52,7 @@
     z-index: 9;
     padding: 10px 0;
     transition: 0.5s;
+    border-bottom: 1px solid #e4e4e4;
     // background: #000;
     .header_content{
       @include displayFlex($justify : space-between , $gap : 20px);

@@ -62,6 +62,9 @@
 </template>
 
 <script setup>
+  const route = useRoute()
+
+
   onMounted(() => {
     const { $gsap } = useNuxtApp()
 
@@ -74,16 +77,17 @@
         scrub: 2,                // Smooth follow-scroll animation
       }
     })
-
-    header.to(".logo_image", {
-      x : 50,
-      y: 350,                       // Move down as the user scrolls
-      scale: 2,                   // Grow bigger
-      // rotate: 180,                  // Rotate smoothly
-      ease: "none",
-      pin: true,
-      scrub: 2
-    })
+    if(route.path == "/" || route.path == "/ar"){
+      header.to(".logo_image", {
+        x : 50,
+        y: 350,                       // Move down as the user scrolls
+        scale: 2,                   // Grow bigger
+        // rotate: 180,                  // Rotate smoothly
+        ease: "none",
+        pin: true,
+        scrub: 2
+      })
+    }
   
   })
 </script>
