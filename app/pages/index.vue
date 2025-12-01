@@ -1,5 +1,8 @@
 <template>
   <div class="page home_page"> 
+    <!-- <div class="logo_image">
+      <img src="../assets/images/logo.png" alt="img" loading="lazy">
+    </div> -->
     <MainSlider />
     <div class="container">
       <!-- CATEGORIES -->
@@ -59,14 +62,38 @@
 </template>
 
 <script setup>
+  onMounted(() => {
+    const { $gsap } = useNuxtApp()
 
+    // FIRST ANIMATION OF THE LOGO IMAGE BASED ON THE TRIGGER HEADER
+    const header = $gsap.timeline({
+      scrollTrigger: {
+        trigger: ".header",            // Animate across the whole page
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,                // Smooth follow-scroll animation
+      }
+    })
+
+    header.to(".logo_image", {
+      x : 50,
+      y: 350,                       // Move down as the user scrolls
+      scale: 2,                   // Grow bigger
+      // rotate: 180,                  // Rotate smoothly
+      ease: "none",
+      pin: true,
+      scrub: 2
+    })
+  
+  })
 </script>
 
-<style lang="scss" scoped>
+
+<style lang="scss">
   @keyframes floatImg {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+    0%   { margin-bottom: 0;}
+    50%  { margin-bottom: 20px; }
+    100% { margin-bottom: 0;}
   }
     @keyframes typing {
       from { width: 0; }
@@ -106,13 +133,13 @@
             height: fit-content;
             object-fit: contain;
             transition: all 1s ease;
+            animation: floatImg 4s ease-in-out infinite;
           }
           
           &:hover img {
-            transform: unset;
-            right: 15px;
-            bottom: 15px;
-            animation: floatImg 4s ease-in-out infinite;
+            // transform: unset;
+            right: 25%;
+            bottom: 40%;
           }
           h4{
             font-size: 60px;

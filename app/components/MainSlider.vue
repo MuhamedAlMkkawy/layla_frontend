@@ -39,7 +39,7 @@
   ])
 
   const config = {
-    height: 800,
+    height: 900,
     itemsToShow: 1,
     gap: 5,
     wrapAround: true,

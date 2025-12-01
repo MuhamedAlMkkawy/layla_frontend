@@ -1,7 +1,7 @@
 <template>
   <header :class="['header' , {'scrolled' : isScrolled }]"  :style="$route.path !== '/' && $route.path !== '/ar' ? 'background : #000;' : ''" >
     <div class="container header_content">
-      <NuxtLink :to="$localeRoute('/')" class="image">
+      <NuxtLink :to="$localeRoute('/')" class="image logo_image">
         <img src="../assets/images/logo.png" alt="image" loading="lazy">
       </NuxtLink>
       <ul class="header_icons">
@@ -22,6 +22,8 @@
 </template>
 
 <script setup>
+  const { $gsap } = useNuxtApp()
+
   const globalStore = useGlobalStore()
 
   // USE THE LOCALES TO MANAGE THE LANGUAGE
@@ -44,20 +46,35 @@
 
 <style lang="scss" scoped>
   header{
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     z-index: 9;
     padding: 10px 0;
     transition: 0.5s;
     // background: #000;
     .header_content{
       @include displayFlex($justify : space-between , $gap : 20px);
-      .image{
-        width: fit-content;
-        height: 60px;
-        flex-shrink: 0;
-        img{
-          object-fit: contain
+      // .image{
+      //   width: fit-content;
+      //   height: 60px;
+      //   flex-shrink: 0;
+      //   img{
+      //     position: relative;
+      //     z-index: 9999;
+      //     object-fit: contain
+      //   }
+      // }
+      .logo_image{
+        width: 80px;
+        height: auto;
+        overflow: visible;
+        flex-shrink: 1;
+        position: relative;
+        z-index: 99999;
+        img {
+          object-fit: contain;
+          display: block;     /* avoids unwanted alignment issues */
+          will-change: transform; /* smoother GSAP animation */
         }
       }
       ul.header_icons{
@@ -81,10 +98,10 @@
       }
     }
     &.scrolled{
-      background: #fff;
+      background: #000;
       // box-shadow: 0 0 6px #e4e4e4;
       .image{
-        filter: brightness(0);
+        // filter: brightness(0);
       }
       ul.header_icons{
         a{
