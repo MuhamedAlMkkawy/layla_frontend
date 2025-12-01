@@ -21,9 +21,10 @@
 <style lang="scss" scoped>
   footer{
     // margin-top: 50px;
+    border-top: 1px solid #e4e4e4;
     padding-block: 50px 120px;
     text-align: center;
-    background: #000;
+    background: #2e2a69;
     color: #fff;
     .footer_content{
       max-width: 800px;
@@ -34,7 +35,7 @@
         margin: 0 auto 30px;
         img{
           object-fit: contain;
-          filter: brightness(0)invert(1);
+          // filter: brightness(0)invert(1);
         }
       }
       p{
