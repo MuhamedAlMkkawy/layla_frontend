@@ -61,7 +61,7 @@ onMounted(() => {
     });
 
     // Floating movement
-    tl.to(model.position, { x: 300, y : 120 , duration: 10  })
+    tl.to(model.position, { x: 300, y : 120 , duration: 20  })
     // tl.to(model.rotation, { y : -30 , duration: 1  })
     tl.to(model.position, { x : 150 ,  y: 60, duration: 10 })
     tl.to(model.position, { x: -30, y: 20, duration: 10 });
@@ -81,7 +81,7 @@ onMounted(() => {
       ease: "none"
     });
     tl.to(model.position , {
-      y : 10,
+      y : -40,
       duration: 10,
       ease: "none"
     })
@@ -89,8 +89,8 @@ onMounted(() => {
     tl.to(model.position, {
       // x : 160 ,
       // y: -15,
-      z : 100,
-      duration: 10,
+      z : 110,
+      duration: 15,
       ease: "none"
     });
 
