@@ -15,18 +15,23 @@
           type="text"
           placeholder="Full Name"
           class="check_input"
-        />
+          data-aos="fade-up"
+          />
         <CustomField
           name="phone_number_1"
           type="number"
           placeholder="Phone Number 1"
           class="check_input"
+          data-aos="fade-up"
+          data-aos-delay="100"
         />
         <CustomField
           name="phone_number_2"
           type="number"
           placeholder="Phone Number 2 ( Optional )"
           class="check_input"
+          data-aos="fade-up"
+          data-aos-delay="200"
         />
         <!-- <CustomField
           name="governorate"
@@ -44,20 +49,26 @@
           placeholder="Select your Governerate"
           :modelValue="governerate"
           @updateSelectField="governerate = $event"
+          data-aos="fade-up"
+          data-aos-delay="300"
         />
         <CustomField
           name="city"
           type="text"
           placeholder="City"
           class="check_input"
+          data-aos="fade-up"
+          data-aos-delay="400"
         />
         <CustomField
           name="full_address"
           type="text"
           placeholder="Full Address"
           class="check_input"
+          data-aos="fade-up"
+          data-aos-delay="500"
         />
-        <button class="check_button main-btn">Apply</button>
+        <button class="check_button main-btn" data-aos="fade-up" data-aos-delay="600">Apply</button>
       </VeeForm>
     </div>
     <SuccesPopup 
