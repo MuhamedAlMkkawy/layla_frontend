@@ -1,6 +1,7 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
+    <LazyThreeScrollModel />
     <Toast />
   </NuxtLayout>
 </template>
