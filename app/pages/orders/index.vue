@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="underline_header">Orders</h1>
       <div class="cart_items">
-        <div class="cart_item">
+        <div class="cart_item" data-aos="fade-up" data-aos-delay="100">
           <div class="product_info product_number">
             <h4>Number</h4>
             <h6>#100</h6>
@@ -21,7 +21,7 @@
             <h6 class="status pending">pending</h6>
           </div>
         </div>
-        <div class="cart_item">
+        <div class="cart_item" data-aos="fade-up" data-aos-delay="200">
           <div class="product_info product_number">
             <h4>Number</h4>
             <h6>#101</h6>
@@ -39,7 +39,7 @@
             <h6 class="status prepared">prepared</h6>
           </div>
         </div>
-        <div class="cart_item">
+        <div class="cart_item" data-aos="fade-up" data-aos-delay="300">
           <div class="product_info product_number">
             <h4>Number</h4>
             <h6>#102</h6>
@@ -57,7 +57,7 @@
             <h6 class="status delivered">delivered</h6>
           </div>
         </div>
-        <div class="cart_item">
+        <div class="cart_item" data-aos="fade-up" data-aos-delay="400">
           <div class="product_info product_number">
             <h4>Number</h4>
             <h6>#103</h6>

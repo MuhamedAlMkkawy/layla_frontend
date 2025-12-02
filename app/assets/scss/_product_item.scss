@@ -2,13 +2,22 @@
   border: 1px solid $mainColor;
   border-radius: 4px;
   overflow: hidden;
+  position: relative;
+  transition: 0.3s;
   .image{
-    height: 250px;
+    height: 300px;
     position: relative;
+    background: $thirdColor;
+    padding: 50px;
+    @include displayFlex();
+    img{
+      width: 60%;
+      object-fit: contain;
+    }
     .rating{
       padding: 5px 8px 6px;
       border-radius: 5px;
-      background: $thirdColor;
+      background: #fff;
       position: absolute;
       top: 5px;
       right: 5px;
@@ -26,19 +35,23 @@
   }
 
   .product_info{
-    padding: 10px 8px 0;
+    padding: 20px 8px 25px;
     h5{
-      font-size: 24px;
+      font-size: 50px;
       font-weight: 600;
+      font-family: "Lavishly Yours", cursive;
     }
     
     .price {
       margin-block: 10px;
       font-size: 16px;
-      font-weight: 800;
+      font-weight: 300;
       span{
+        font-size: 20px;
+        font-weight: 800;
         color: $mainColor;
         del{
+          font-size: 14px;
           margin-inline-start: 10px;
           font-weight: 300;
           color: grey;
@@ -73,18 +86,37 @@
 
   }
   button.main-btn{
-    border-radius: 0;
+    position: absolute;
+    bottom: -10px;
+    inset-inline-end: 10px;
+    @include circle(50px);
+    justify-content: center;
+    gap: 0;
+    margin-top: 0;
+    opacity: 0;
     span{
       width: 0;
       overflow: hidden;
       transition: 1s;
     }
     &:hover{
+      i.pi{
+        margin: 0;
+      }
       span{
         width: auto;
         overflow: visible;
         margin-inline-end: 10px;
       }
+    }
+  }
+  &:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 5px 10px #e4e4e4;
+    border-color: transparent;
+    .main-btn{
+      opacity: 1 ;
+      bottom: 20px;
     }
   }
 }
@@ -94,7 +126,7 @@
   @include displayFlex($justify : flex-start , $gap : 5px);
   p{
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 300;
   }
   li{
     @include circle(30px);

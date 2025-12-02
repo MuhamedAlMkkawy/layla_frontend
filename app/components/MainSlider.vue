@@ -11,24 +11,24 @@
       </div>
     </Slide>
 
-    <!-- <template #addons>
-      <Navigation />
+    <template #addons>
+      <!-- <Navigation /> -->
       <Pagination />
-    </template> -->
+    </template>
   </Carousel>
 </template>
 
 
 <script setup>
   import 'vue3-carousel/carousel.css'
-  import { Carousel, Slide } from 'vue3-carousel'
+  import { Carousel, Slide , Navigation , Pagination } from 'vue3-carousel'
 
   const images = ref([
     {
       id : 1 ,
       url : 'https://nokshi-3.myshopify.com/cdn/shop/files/home-1-slider-1.jpg?v=1615378396',
       title : 'Slider 1 Title',
-      text : 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+      text : 'lorem ipsum dolor sit ,amet consectetur adipisicing elit. Quisquam, quod.'
     },
     {
       id : 2 ,
@@ -46,7 +46,7 @@
     slideEffect: 'fade',
     autoplay: 1500, // Enables autoplay
     transition: 3000, // Time interval between slides
-    pauseAutoplayOnHover: true, // Pauses autoplay on hover
+    pauseAutoplayOnHover: false, // Pauses autoplay on hover
   }
 </script>
 

@@ -67,7 +67,7 @@
     color: #333;
     padding-inline: 10px;
     select{
-      padding-block: 25px;
+      padding-block: 15px;
     }
   }
 </style>

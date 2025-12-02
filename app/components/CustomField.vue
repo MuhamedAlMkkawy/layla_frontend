@@ -40,7 +40,7 @@
 
 <style lang="scss" scoped>
   input{
-    padding: 25px 10px;
+    padding: 15px 10px;
     background: #e4e4e499;
     margin-bottom: 5px;
     border-radius: 5px;

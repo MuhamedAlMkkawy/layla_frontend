@@ -4,7 +4,7 @@
       <!-- <PageBreadcrumb pageName="Cart"/> -->
       <h1 class="underline_header">Products</h1>
       <div class="cart_items">
-        <div class="cart_item" v-for="i in 3" :key="i">
+        <div class="cart_item" v-for="i in 3" :key="i" data-aos="fade-up" :data-aos-delay="i * 200">
           <div class="product_info product_details">
             <div class="image">
               <Image src="https://cdn.pixabay.com/photo/2025/02/18/21/14/sea-onion-9416402_1280.jpg" alt="image" loading="lazy" preview/>
@@ -53,7 +53,7 @@
             class="coupon_input"
             @updateInputField="handleSubmitCoupon($event)"
           />
-          <button class="coupon_button">Apply</button>
+          <button class="coupon_button" @click.prevent="handleSubmitCoupon">Apply</button>
         </VeeForm>
       </div>
       <div class="order_total">
@@ -117,6 +117,7 @@
           border-radius: 8px 0 0 8px  ;
           border-right: none;
           input{
+            padding: 10px !important;
             background: #fff;
           }
         }

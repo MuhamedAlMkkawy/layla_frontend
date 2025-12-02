@@ -7,7 +7,7 @@
       <div class="products_content">
         <NuxtLink class="product_item" :to="'/products/' + i" v-for="i in 8" :key="i">
           <div class="image">
-            <img src="https://c4.wallpaperflare.com/wallpaper/911/205/312/artwork-digital-art-landscape-river-wallpaper-preview.jpg" alt="image" loading="lazy">
+            <img src="../../assets/images/11.png" alt="image" loading="lazy">
             <div class="rating">
               <p>4.5</p>
               <i class="pi pi-star-fill"></i>
@@ -20,14 +20,14 @@
               <p>
                 Colors : 
               </p>
-              <li><span style="background-color: #007BFF"></span></li>
-              <li><span style="background-color: #FFD60A"></span></li>
-              <li><span style="background-color: #28C76F"></span></li>
-              <li><span style="background-color: #FF66B3"></span></li>
+              <li data-aos="fade-up"><span style="background-color: #007BFF"></span></li>
+              <li data-aos="fade-up" data-aos-delay="100"><span style="background-color: #FFD60A"></span></li>
+              <li data-aos="fade-up" data-aos-delay="200"><span style="background-color: #28C76F"></span></li>
+              <li data-aos="fade-up" data-aos-delay="300"><span style="background-color: #FF66B3"></span></li>
             </ul>
           </div>
-          <button class="main-btn"  @click.stop.prevent="ToggleShowPopup">
-            <span>إضافة إلي السلة</span>
+          <button class="main-btn cart_btn"  @click.stop.prevent="ToggleShowPopup">
+            <span></span>
             <i class="pi pi-shopping-cart"></i>
           </button>
         </NuxtLink>
