@@ -58,6 +58,9 @@
       </section>
       <!-- FAQ -->
     </div>
+    <ClientOnly>
+      <LazyThreeScrollModel />
+    </ClientOnly>
   </div>
 </template>
 
