@@ -39,7 +39,7 @@
     },
     {
       name: "Twitter",
-      url: "https://cdn-icons-png.flaticon.com/512/5968/5968958.png",
+      url: "https://x.com/",
       icon: "https://cdn-icons-png.flaticon.com/512/5968/5968958.png",
     },
     {
