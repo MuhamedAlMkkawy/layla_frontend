@@ -66,7 +66,7 @@
     border-top: 1px solid #e4e4e4;
     padding-block: 50px 120px;
     text-align: center;
-    background: #2e2a69;
+    background: #d7aec5;
     color: #fff;
     .footer_content{
       max-width: 800px;
