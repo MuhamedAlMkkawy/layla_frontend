@@ -14,7 +14,7 @@ export default defineNuxtPlugin(() => {
   });
 
   // Prevent browser from snapping or jumping
-  document.documentElement.style.overscrollBehavior = "none";
+  document.documentElement.style.overscrollBehavior = "smooth";
 
   function raf(time: number) {
     lenis.raf(time);
