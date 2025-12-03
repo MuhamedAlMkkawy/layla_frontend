@@ -90,7 +90,7 @@ onMounted(() => {
       // x : 160 ,
       // y: -15,
       z : 110,
-      duration: 15,
+      duration: 10,
       ease: "none"
     });
 
