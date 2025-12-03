@@ -194,7 +194,6 @@
       .best_sale_content{
         @include displayGrid($fit : auto-fill);
         .best_sale_item{
-          max-width: 300px;
           border: 1px solid #e4e4e4;
           .image{ 
             width: 100%;
