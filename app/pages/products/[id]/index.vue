@@ -40,11 +40,11 @@
           </ul>
           <div class="flex_buttons">
             <button class="main-btn" @click="ToggleShowPopup">
-              <span>إضافة إلي السلة</span>
-              <i class="pi pi-shopping-cart"></i>
+              <span>Add to Cart</span>
+              <!-- <i class="pi pi-shopping-cart"></i> -->
             </button>
             <button class="main-btn reversed" @click="$router.push($localeRoute('/'))">
-              العودة للرئيسية
+              Go to Home
             </button>
           </div>
         </div>

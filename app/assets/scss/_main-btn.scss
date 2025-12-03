@@ -15,9 +15,8 @@
 	margin: 20px auto 0;
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 	// transition: box-shadow 0.4s ease, color 0.3s ease;
-    font-family: "Lavishly Yours", cursive !important;
-
-
+	font-family: "Lavishly Yours", cursive !important;
+		
 	transition: 1s;
 	@include displayFlex($gap: 4px);
 	

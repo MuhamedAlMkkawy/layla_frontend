@@ -23,18 +23,20 @@
           </ul>
         </div>
         <button class="main-btn">
-          <span>مشاهدة المنتج</span>
           <i class="pi pi-eye"></i>
         </button>
       </NuxtLink>
     </Slide>
+    <template #addons>
+      <Navigation />
+    </template>
   </Carousel>
 </template>
 
 
 <script setup>
   import 'vue3-carousel/carousel.css'
-  import { Carousel, Slide } from 'vue3-carousel'
+  import { Carousel, Slide , Navigation } from 'vue3-carousel'
 
   const images = Array.from({ length: 10 }, (_, index) => ({
     id: index + 1,
@@ -43,7 +45,7 @@
 
   const config = {
     // height: 200,
-    itemsToShow: 5,
+    itemsToShow: 4,
     gap: 5,
     autoplay : 3000, // Enables autoplay
     autoplaySpeed: 0,  
@@ -53,24 +55,32 @@
       // 300px and up
       400: {
         itemsToShow: 2,
-        snapAlign: 'center',
       },
       // 600px and up
       600: {
         itemsToShow: 3,
-        snapAlign: 'center',
       },
       // 1024px and up
       1024: {
-        itemsToShow: 5,
-        snapAlign: 'center',
+        itemsToShow: 4,
       },
     },
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .carousel__track {
     transition-timing-function: linear-ease !important; /* smooth continuous */
+  }
+  .carousel__next, .carousel__prev{
+    height: 100%;
+    background: #e4e4e49c;
+    width: 40px;
+    color: $mainColor;
+    transition: 0.6s;
+    &:hover{
+      color: $mainColor;
+      background: #fff;
+    }
   }
 </style>

@@ -80,7 +80,7 @@
         scrub: 2,                // Smooth follow-scroll animation
       }
     })
-    if(route.path == "/" || route.path == "/ar"){
+    if(route.path == "/" || route.path == "/ar/"){
       header.to(".logo_image", {
         x : 50,
         y: 350,                       // Move down as the user scrolls
